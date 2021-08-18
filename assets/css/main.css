@@ -6,7 +6,17 @@
 .law-of-attraction {
     position: relative;
 }
+.law-of-attraction__row {
+    flex-wrap: nowrap;
+}
+.law-of-attraction__figure {
+    flex: 0 1 916px;
+}
+.law-of-attraction__section {
+    flex: 0 1 auto;
+}
 .main-figure {
+    position: relative;
     height: 937px;
 }
 .main-figure__image {
@@ -26,7 +36,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 50px;
+    margin-top: 20px;
+    padding-left: 60px;
 }
 .main-figure__pretitle,
 .main-figure__title {
@@ -35,38 +46,45 @@
     font-family: 'Open Sans', sans-serif
 }
 .main-figure__pretitle {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 27px;
+    line-height: 27px;
     font-weight: 700;
+    letter-spacing: .19em;
+    display: block;
+    margin-bottom: 30px;
 }
 .main-figure__title {
-    font-size: 75px;
-    line-height: 1.1em;
+    font-size: 80px;
+    line-height: 1em;
     font-weight: 600;
     max-width: 450px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    letter-spacing: .03em;
 }
 
 .law-of-attraction__bttn {
     color: #fff;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
+    line-height: 55px;
     font-weight: 600;
-    letter-spacing: .07em;
+    letter-spacing: .18em;
+    display: inline-block;
 }
 .law-of-attraction__bttn::before {
     content: ">";
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     display: inline-block;
     background-color: #fff;
     border-radius: 50%;
     color: #000;
     text-align: center;
     font-size: 25px;
-    line-height: 60px;
-    margin-right: 10px;
+    line-height: 55px;
+    margin-right: 15px;
+    text-indent: 6px;
     position: relative;
     top: 4px;
 }
@@ -87,13 +105,50 @@
 .section-main__article {
     flex: 0 1 50%;
     height: 596px;
+    padding: 32px 20px 20px 18px;
 }
 .section-main__article--yellow {
     background-color: #eaae3e;
 }
 .section-main__article--purple {
     background-color: #73479f;
+    /* background-image: url('../imgs/test.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
 }
+
+
+.section-main__article-number,
+.section-main__article-title,
+.section-main__article-text {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+}
+.section-main__article-number {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    margin-bottom: 20px;
+}
+.section-main__article-title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    margin-bottom: 190px;
+}
+.section-main__article-text {
+    font-size: 32px;
+    line-height: 1.2em;
+    font-weight: 700;
+    letter-spacing: .01em;
+    margin-bottom: 130px;
+    max-width: 230px;
+}
+
+
 
 .section-bottom {
     width: 100%;
