@@ -3,18 +3,34 @@
     background-color: #035f74;
 }
 
-.law-of-attraction {
+/* ----------------------------------------------------------------- */
+/* Atracction */
+/* ----------------------------------------------------------------- */
+.atracction {
+    font-size: 10px;
+}
+/* Nav */
+.atracction__nav {
+    display: none;
+}
+/* Figure and Section */
+.atracction__section {
     position: relative;
 }
-.law-of-attraction__row {
+.atracction__section__row {
     flex-wrap: nowrap;
 }
-.law-of-attraction__figure {
+.atracction__section-figure {
     flex: 0 1 916px;
 }
-.law-of-attraction__section {
+.atracction__section-section {
     flex: 0 1 auto;
 }
+.atracction__slick-container {
+    display: inline-block;
+    width: 916px;
+}
+/* Main Figure */
 .main-figure {
     position: relative;
     height: 937px;
@@ -62,7 +78,8 @@
     letter-spacing: .03em;
 }
 
-.law-of-attraction__bttn {
+/* Bttn */
+.atracction__bttn {
     color: #fff;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
@@ -72,7 +89,7 @@
     letter-spacing: .18em;
     display: inline-block;
 }
-.law-of-attraction__bttn::before {
+.atracction__bttn::before {
     content: ">";
     width: 55px;
     height: 55px;
@@ -88,42 +105,33 @@
     position: relative;
     top: 4px;
 }
-
-
-.nav-attraction {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.main-navigation {
-    display: none;
-}
-
+/* Section main */
 .section-main {
     display: flex;
 }
 .section-main__article {
+    position: relative;
     flex: 0 1 50%;
     height: 596px;
     padding: 32px 20px 20px 18px;
 }
 .section-main__article--yellow {
     background-color: #eaae3e;
+    color: #250700;
 }
 .section-main__article--purple {
     background-color: #73479f;
-    /* background-image: url('../imgs/test.jpg');
+    background-image: url('../imgs/article-1.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
+    color: #fff;
 }
-
-
 .section-main__article-number,
 .section-main__article-title,
 .section-main__article-text {
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
+    color: inherit;
     text-transform: uppercase;
     display: block;
 }
@@ -137,24 +145,42 @@
     font-size: 26px;
     font-weight: 700;
     letter-spacing: .01em;
-    margin-bottom: 190px;
+}
+.section-main__article-title + .section-main__article-text {
+    margin-top: 190px;
 }
 .section-main__article-text {
     font-size: 32px;
     line-height: 1.2em;
     font-weight: 700;
     letter-spacing: .01em;
-    margin-bottom: 130px;
     max-width: 230px;
 }
-
-
-
+.section-main__article-title + .section-main__article-description {
+    margin-top: 50px;
+}
+.section-main__article-description {
+    font-size: 21px;
+    line-height: 1.4em;
+    font-weight: 500;
+    letter-spacing: .01em;
+    max-width: 230px;
+}
+.section-main__article .atracction__bttn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+/* Section bottom */
 .section-bottom {
     width: 100%;
     height: 341px;
     background-color: #000;
 }
+
 @media only screen
 and (min-width: 767px) {
 
@@ -163,3 +189,8 @@ and (min-width: 767px) {
 and (max-width: 767px) {
     
 }
+
+
+/* ----------------------------------------------------------------- */
+/* End Atracction */
+/* ----------------------------------------------------------------- */
