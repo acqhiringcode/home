@@ -22,6 +22,25 @@
 
     <div class="wrapper wrapper--blue">
         
+        <header class="container header-section">
+            <div class="row">
+                <div class="col-12-12">
+                    
+                    <div class="header-section__content">
+                        <h2 class="header-section__title">Ciber Punk</h2>
+                        <p class="header-section__text">Maqueta creada utilizando enteramente flexbox, exprimiendo la propiedad 
+                            FLEX-GROW para evitar el uso de MEDIAS-QUERIES.
+                        </p>
+    
+                        <figure class="header-section__refe">
+                            <img src="" alt="" class="header-section__image">
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        
         <div class="container atracction">
 
             <nav class="container atracction__nav">
@@ -45,8 +64,13 @@
             </nav>
             
             <section class="container atracction__section">
-                <div class="row w-1520 top atracction__section__row">
-                    <div class="middle atracction__section-figure">
+                <div class="row top">
+                    <div class="atracction__section-figure">
+
+                        <div class="atracction__arrows-container">
+                            <a class="atracction__prev-arrow"><i class="arrow__left">P</i></a>
+                            <a class="atracction__next-arrow"><i class="arrow__right">N</i></a>
+                        </div>
 
                         <div class="atracction__slick-container" data-comp="main-slick">
                             <figure class="main-figure">
@@ -95,27 +119,38 @@
                         </section>
 
                         <section class="section-bottom">
-                            <!-- <div>
-                                <article>
-                                    <h3></h3>
-                                    <p></p>
-                                    <a href=""></a>
+                            <div class="article-container__arrows-container">
+                                <a class="article-container__prev-arrow"><i class="arrow__left">P</i></a>
+                                <a class="article-container__next-arrow"><i class="arrow__right">N</i></a>
+                            </div>
+                            <div class="article-container" data-comp="bottom-slick">
+                                <article class="article-bottom">
+                                    <h3 class="article-bottom__title">THINK, MANIFESTATION</h3>
+                                    <p class="article-bottom__text">A few years ago I really wanted more margin in my life Less on my calendar. A shorter To Do list. I wanted space in my day, in my mind, in my closets, I said ...</p>
+                                    <a class="article-bottom__link" href="#">READ MORE</a>
+                                </article>
+                                <article class="article-bottom">
+                                    <h3 class="article-bottom__title">THINK, MANIFESTATION</h3>
+                                    <p class="article-bottom__text">A few years ago I really wanted more margin in my life Less on my calendar. A shorter To Do list. I wanted space in my day, in my mind, in my closets, I said ...</p>
+                                    <a class="article-bottom__link" href="#">READ MORE</a>
                                 </article>
                             </div>
-                            <ul>
-                                <li>
-                                    <a href=""></a>
+                            
+                            <ul class="article-list">
+                                <li class="article-list__item">
+                                    <a href="#" class="article-list__link">FB</a>
                                 </li>
-                                <li>
-                                    <a href=""></a>
+                                <li class="article-list__item">
+                                    <a href="#" class="article-list__link">IN</a>
                                 </li>
-                                <li>
-                                    <a href=""></a>
+                                <li class="article-list__item">
+                                    <a href="#" class="article-list__link">TW</a>
                                 </li>
-                                <li>
-                                    <a href=""></a>
+                                <li class="article-list__item">
+                                    <a href="#" class="article-list__link">YT</a>
                                 </li>
-                            </ul> -->
+                            </ul>
+
                         </section>
                     </div>
                 </div>
@@ -129,14 +164,26 @@
 
     <script>
 
+        $("[data-comp=bottom-slick]").slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            autoplay: false,
+            speed: 400,
+            slidesToShow: 1,
+            prevArrow: $('.article-container__prev-arrow'),
+            nextArrow: $('.article-container__next-arrow')
+        });
         $("[data-comp=main-slick]").slick({
             dots: false,
-            arrows: false,
+            arrows: true,
             infinite: true,
             autoplay: true,
             fade: true,
             speed: 1200,
-            slidesToShow: 1
+            slidesToShow: 1,
+            prevArrow: $('.atracction__prev-arrow'),
+            nextArrow: $('.atracction__next-arrow')
         });
 
     </script>
