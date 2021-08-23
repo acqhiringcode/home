@@ -360,11 +360,13 @@ and (max-width: 767px) {
     justify-content: space-between;
     max-width: 160px;
 }
-
-.article-list {
-    position: static;
-    padding: 0;
-    margin-top: 20px;
+@media only screen
+and (max-width: 768px) {
+    .article-list {
+        position: static;
+        padding: 0;
+        margin-top: 20px;
+    }
 }
 /* ----------------------------------------------------------------- */
 /* End Atracction */
