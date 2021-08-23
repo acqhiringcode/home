@@ -1,0 +1,406 @@
+.wrapper--lol {
+    font-size: 10px;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    background-image: url('../imgs/league/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.league-of-legend {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.league-of-legend__content {
+    width: 100%;
+    display: inline-block;
+    max-width: 140em;
+}
+.league-of-legend__team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.champion {
+    position: relative;
+    width: 24.4em;
+}
+.champion::before {
+    content: "";
+    display: inline-block;
+    width: calc(100% + 1.4em);
+    height: 100%;
+    background-image: url('../imgs/league/marco.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+.champion__figure {
+    position: relative;
+    height: 39em;
+    z-index: 1;
+}
+.champion__image {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;  
+}
+.champion__perfil {
+    position: absolute;
+    left: 0;
+    bottom: -5.5em;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+.champion__perfil::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 2em;
+    width: 100%;
+    height: 2.4em;
+    background-image: url('../imgs/league/marco-perfil.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+.champion__title,
+.champion__ico {
+    position: relative;
+    z-index: 1;
+}
+.champion__title {
+    color: #fff;
+    font-size: 1.8em;
+    line-height: 1.2em;
+    letter-spacing: .04em;
+    margin-bottom: .4em;
+}
+.champion__ico {
+    display: inline-block;
+}
+.champion__habilities {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5.3em;
+}
+.champion__skills {
+    width: 6em;
+    height: 3em;
+    margin-left: 1em;
+    display: flex;
+}
+.champion__skill {
+    width: 3em;
+    height: 3em;
+    background-image: url('../imgs/league/skills.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.champion__skill--ignite {
+    background-position: right center;
+}
+.champion__skill--flash {
+    background-position: left center;
+}
+.champion__runas {
+    position: relative;
+    width: 5.8em;
+    height: 4.6em;
+    margin-right: 1em;
+    display: flex;
+    align-items: flex-end;
+}
+.champion__runa {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.champion__runa--letalidad {
+    flex:  0 1 4.2em;
+    height: 4.2em;
+    background-image: url('../imgs/league/runa-1.jpg');
+}
+.champion__runa--valor {
+    display: inline-block;
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    width: 3em;
+    height: 3em;
+    background-image: url('../imgs/league/runa-2.jpg');
+}
+.champion__nick-container {
+    background-color: #000;
+    text-align: center;
+    padding: .6em 0 1.4em 0;
+}
+.champion__nick {
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    letter-spacing: .04em;
+    font-weight: 600;
+}
+
+.league-of-legend__tips {
+    height: 8em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.league-of-legend__tips-title,
+.league-of-legend__tips-text {
+    color: #fff;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+    position: relative;
+    top: -.05em;
+}
+.league-of-legend__tips-title {
+    font-size: 1.8em;
+    margin-bottom: .08em;
+}
+.league-of-legend__tips-text {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    letter-spacing: .06em;
+    opacity: .7;
+}
+
+@media only screen
+and (min-width: 768px)
+and (max-width: 1440px) {
+    .wrapper--lol {
+        font-size: 8px;
+    }
+}
+@media only screen
+and (min-width: 768px)
+and (max-width: 1160px) {
+    .league-of-legend__content {
+        max-width: 80em;
+    }
+    .champion {
+        margin-bottom: 1.5em;
+    }
+    .champion.empty {
+        visibility: hidden;
+    }
+}
+@media only screen
+and (max-width: 768px) {
+    .league-of-legend__team {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .champion {
+        margin-bottom: 1.5em;
+    }
+}
+
+
+/* 
+.wrapper--lol {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('../imgs/league/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.league-of-legend {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.league-of-legend__content {
+    width: 100%;
+    display: inline-block;
+    max-width: 1400px;
+}
+.league-of-legend__team {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.champion {
+    position: relative;
+    width: 244px;
+}
+.champion::before {
+    content: "";
+    display: inline-block;
+    width: calc(100% + 14px);
+    height: 100%;
+    background-image: url('../imgs/league/marco.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+.champion__figure {
+    position: relative;
+    height: 390px;
+    z-index: 1;
+}
+.champion__image {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;  
+}
+.champion__perfil {
+    position: absolute;
+    left: 0;
+    bottom: -55px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+.champion__perfil::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: 24px;
+    background-image: url('../imgs/league/marco-perfil.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+.champion__title,
+.champion__ico {
+    position: relative;
+    z-index: 1;
+}
+.champion__title {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2em;
+    letter-spacing: .04em;
+    margin-bottom: 4px;
+}
+.champion__ico {
+    display: inline-block;
+}
+.champion__habilities {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 53px;
+}
+.champion__skills {
+    width: 60px;
+    height: 30px;
+    margin-left: 10px;
+    display: flex;
+}
+.champion__skill {
+    width: 30px;
+    height: 30px;
+    background-image: url('../imgs/league/skills.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.champion__skill--ignite {
+    background-position: right center;
+}
+.champion__skill--flash {
+    background-position: left center;
+}
+.champion__runas {
+    position: relative;
+    width: 58px;
+    height: 46px;
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+.champion__runa {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.champion__runa--letalidad {
+    flex:  0 1 42px;
+    height: 42px;
+    background-image: url('../imgs/league/runa-1.jpg');
+}
+.champion__runa--valor {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../imgs/league/runa-2.jpg');
+}
+.champion__nick-container {
+    background-color: #000;
+    text-align: center;
+    padding: 6px 0 14px 0;
+}
+.champion__nick {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.2em;
+    letter-spacing: .04em;
+    font-weight: 600;
+}
+
+.league-of-legend__tips {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.league-of-legend__tips-title,
+.league-of-legend__tips-text {
+    color: #fff;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+    position: relative;
+    top: -5px;
+}
+.league-of-legend__tips-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.league-of-legend__tips-text {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: .06em;
+    opacity: .7;
+} */
